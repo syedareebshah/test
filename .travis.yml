@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - '15.3.0'
+
+scrpit:
+  - npm install
+  - npm test
+  - npm run build
+
+deploy:
+  provider: surge
+  skip_cleanup: true
+  domain: testingbyareeb.surge.sh
+  project: ./build/
+
+on:
+  branch: master
