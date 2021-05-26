@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div>
-      Allah Akbar
+      <h1>Allah Akbar</h1>
     </div>
   );
 }
