@@ -16,11 +16,13 @@ jobs:
         node-version: 12
     - uses: borales/actions-yarn@v2.0.0 # `yarn install`
       with:
-          cmd: install 
+          cmd: install
+          run: npm test
+          
     - uses: borales/actions-yarn@v2.0.0 # `yarn build`
       with:
           cmd: build 
     - name: Install Surge
       run: npm install -g surge
     - name: Run surge
-      run: surge ./build shoestorebyareeb.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+      run: surge ./build testingbyareeb.surge.sh --token ${{ secrets.SURGE_TOKEN }}
